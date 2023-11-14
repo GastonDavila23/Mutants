@@ -1,4 +1,6 @@
 def adn_valido(dna):
+    if len(dna) != 6 or any(len(fila) != 6 for fila in dna):
+        return False
     for fila in dna:
         for letra in fila:
             if letra not in ['A','C','G','T']:
